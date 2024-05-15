@@ -1,11 +1,226 @@
-
-*{
+* {
     padding: 0px;
     margin: 0px;
     border: 0px;
 }
 
-html{
+html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
+.preloader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+}
+
+.preloader-container img {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    animation: fadeInPreloader 700ms forwards,
+        logoAnimation1 400ms 6,
+        logoAnimation2 500ms 2s;
+}
+
+@keyframes fadeInPreloader {
+    0% {
+        top: -500px;
+        width: 10%;
+    }
+
+    100% {
+        top: 0px;
+        width: 40%;
+    }
+}
+
+@keyframes logoAnimation1 {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoAnimation2 {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.6);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(20, 20, 20, 0.7);
+    position: fixed;
+    z-index: 2;
+}
+
+.logo {
+    position: absolute;
+    height: 30px;
+    width: auto;
+    top: 25px;
+    left: 25px;
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(20, 20, 20);
+}
+
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/banner-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.presentation {
+    width: 60%;
+    color: white;
+}
+
+.presentation h1 {
+    line-height: 110px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 50px;
+}
+
+.presentation span {
+    background-color: rgb(5, 119, 142);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-btn {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 20px;
+    border: solid 1px white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 250ms;
+}
+
+.contact-btn:hover {
+    background-color: white;
+    color: rgb(5, 119, 142);
+}
+
+.arrow-link {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    animation: floatArrow 700ms infinite;
+}
+
+.arrow {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+@keyframes floatArrow {
+    0% {
+        bottom: 10px;
+    }
+
+    50% {
+        bottom: 7px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
+}
+
+.service-container {
+    flex-direction: column;
+}
+
+.title-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: rgb(5, 119, 142);
+    margin-right: 20px;
+}
+
+.subtitle {
+    color: white;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.cards {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    height: 300px;
+    background-color: rgb(30, 30, 30);
+    transition: 250ms;
+}
+
+.card:hover {
+    border: solid 1px rgb(5, 119, 142);
+    box-shadow: 1px 1px 10px rgb(0, 46, 55);
+}
