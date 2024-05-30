@@ -18,7 +18,7 @@ function loading() {
             container.style.display = 'flex'
         });
         preloader.style.display = 'none'
-    }, 2800)
+    }, 0)
 }
 
 loading();
