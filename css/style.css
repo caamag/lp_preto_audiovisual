@@ -238,6 +238,7 @@ h3 {
 
 .title-container {
     width: 60%;
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -260,6 +261,7 @@ h3 {
 
 .cards {
     width: 60%;
+    max-width: 1350px;
     margin: 0 auto;
     margin-top: 50px;
     display: flex;
@@ -320,7 +322,9 @@ h3 {
 
 .works-content {
     height: 60%;
-    width: 200%;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
     margin-top: 50px;
     display: flex;
     transition: 500ms;
@@ -329,18 +333,64 @@ h3 {
 .slide {
     width: 25%;
     height: 100%;
-    background-color: white;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 1500ms;
-    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 250ms;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
+.slide:hover{
+    filter: grayscale(70%)
+}
+
+.slide1,
+.slide3{
+    background-image: url(../projetcs/img-projetc1.jpg);
+}
+
+.slide2, 
+.slide4{
+    background-image: url(../projetcs/img-project2.jpg);
+}
+
+.slide a{
+    color: white;
+    background-color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: 150ms;
+    display: none;
+}
+
+.slide h3, 
+.slide p{
+    display: none;
+    color: white;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.slide p{
+    font-size: 1.6rem;
+    width: 75%;
+}
+
+.slide a:hover{
+    background-color: rgb(30,30,30);
+}
+
+.slide:hover > a,
+.slide:hover > h3,
+.slide:hover > p{
+    display: block;
 }
 
 /*squad container*/
