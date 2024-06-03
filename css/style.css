@@ -320,6 +320,11 @@ h3 {
     justify-content: end;
 }
 
+.works-title .line{
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
 .works-content {
     height: 60%;
     width: 100%;
